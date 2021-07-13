@@ -2,7 +2,7 @@
 const dotenv = require("dotenv")
 const express = require('express')
 const app = express();
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 8060
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
@@ -12,9 +12,6 @@ dotenv.config({path:"./config.env"});
 
 require("./__DATABASE/__INITDB/initDB");
 
-app.get("/" , async(req , res)=>{
-    res.send("Hello world")
-})
 
 // link the router files 
 app.use(require('./__ROUTER/experten'))
