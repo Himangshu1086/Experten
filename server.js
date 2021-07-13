@@ -2,6 +2,7 @@
 const dotenv = require("dotenv")
 const express = require('express')
 const app = express();
+const PORT = process.env.PORT || 5000
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
@@ -22,7 +23,7 @@ app.use(require('./__ROUTER/experten'))
 app.use(require('./__ROUTER/Services'))
 
 
-const PORT = process.env.PORT || 5000
+
 
 
 
