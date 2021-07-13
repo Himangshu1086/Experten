@@ -1,0 +1,14 @@
+#heading-category{
+    font-family:Ubuntu ;
+    letter-spacing: 3px ;
+}
+#heading-category:hover{
+    border-bottom: 3px white solid;
+    border-radius: 7px;
+    transform: translate(0px ,-20px );
+    transition: all 1s;
+    padding-left: 10px;
+    padding-bottom: 10px;
+   
+    
+}
