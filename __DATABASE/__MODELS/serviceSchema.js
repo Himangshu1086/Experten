@@ -1,6 +1,5 @@
-const mongoose = require('mongoose')
-
-const serviceSchema  = mongoose.Schema({
+const mongoose = require("mongoose");
+const serviceSchema  = new mongoose.Schema({
 
     profession :{type:String , requried:true },
     personName :{type:String , required:true},
