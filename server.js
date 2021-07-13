@@ -17,7 +17,7 @@ app.use(require('./__ROUTER/experten'))
 app.use(require('./__ROUTER/Services'))
 
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 5000
 
 app.listen( PORT , ()=>{
     console.log(`server connected IN PORT ${PORT}`)
