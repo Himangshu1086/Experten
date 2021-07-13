@@ -8,7 +8,12 @@ app.use(express.urlencoded({extended:true}))
 
 dotenv.config({path:"./config.env"});
 
+
 require("./__DATABASE/__INITDB/initDB");
+
+app.get("/" , async(req , res)=>{
+    res.send("Hello world")
+})
 
 // link the router files 
 app.use(require('./__ROUTER/experten'))
