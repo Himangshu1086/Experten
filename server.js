@@ -24,7 +24,7 @@ app.use(require('./__ROUTER/Services'))
 
 
 
-if(process.env.REACT_APP_HOST_TYPE == "production"){
+if(process.env.NODE_ENV == "production"){
     app.use(express.static("frontend/build"));
 
     app.get('/*', function(req, res) {

@@ -17,11 +17,9 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "REACT_APP_HOST_TYPE=dev craco start",
-    "build:dev": "REACT_APP_HOST_TYPE=dev craco build",
-    "build:test": "REACT_APP_HOST_TYPE=test craco build",
-    "build:stage": "REACT_APP_HOST_TYPE=stage craco build",
-    "build:prod": "REACT_APP_HOST_TYPE=prod craco build",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
