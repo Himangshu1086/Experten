@@ -27,13 +27,13 @@ app.use(require('./__ROUTER/Services'))
 if(process.env.REACT_APP_HOST_TYPE == "production"){
     app.use(express.static("frontend/build"));
 
-    // app.get('/*', function(req, res) {
-    //     res.sendFile(path.join(__dirname, 'frontend/build/index.html'), function(err) {
-    //       if (err) {
-    //         res.status(500).send(err)
-    //       }
-    //     })
-    //   })
+    app.get('/*', function(req, res) {
+        res.sendFile(path.join(__dirname, 'frontend/build/index.html'), function(err) {
+          if (err) {
+            res.status(500).send(err)
+          }
+        })
+      })
 }
 
 
