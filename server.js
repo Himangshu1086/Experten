@@ -3,6 +3,7 @@ const dotenv = require("dotenv")
 const express = require('express')
 const app = express();
 const PORT = process.env.PORT || 8060
+const path = require('path');
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
