@@ -8,10 +8,10 @@ function Navbar() {
       <nav className=" text-white fixed top-0 left-0 bg-black shadow-none z-50" style={{ padding:"2px"}}>
         <div className="flex">
           <div className="flex">
-            <img className="w-16 " src="logo.png"/>
+            {/* <img className="w-16 " src="logo.png"/> */}
             <Link to="/" className=" hover:text-blue-300 text-3xl px-3 pt-3 tracking-widest font-black text-center" style={{fontFamily:"Festive" ,letterSpacing:"4px" }}>Experten</Link>
           </div>
-          <ul className="absolute right-0 px-16 " style={{fontFamily:"Ubuntu"}}>
+          <ul className="absolute right-0 sm:px-16 px-1 " style={{fontFamily:"Ubuntu"}}>
             <li>
               <Link to="/signIn" className="hover:text-blue-300">
                    Sign In

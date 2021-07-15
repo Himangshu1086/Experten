@@ -35,8 +35,8 @@ rotate_right
         <div>
             <nav></nav>
            <div className="  h-96 bg-black">
-                <h1 className="absolute text-white text-6xl tracking-widest z-20 transform top-1/5 mt-20 left-1/2 -translate-x-1/2 border-b-2 pb-3">Teachers </h1>
-                <span className="absolute text-white text-center z-20 text-3xl tracking-wider transform top-1/4 mt-20 left-1/2 -translate-x-1/2">Get your highly qualified from different universities personal mentors</span>
+                <h1 className="absolute text-white text-6xl tracking-widest z-20 transform top-1/5 mt-24 sm:mt-20  left-1/2 -translate-x-1/2 border-b-2 pb-3">Teachers </h1>
+                <span className="absolute text-white text-center z-20 sm:text-3xl text-xl tracking-wider transform top-1/4  mt-20 sm:left-1/2 sm:-translate-x-1/2  ">Get your highly qualified from different universities personal mentors</span>
                 <img className="w-full h-96 opacity-30 object-cover" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" />
             </div>
 
@@ -47,7 +47,7 @@ rotate_right
               { Experts.expert.map(expt=>{
                 return (
                   <div>
-                <Link to={`/category/teacher/${expt._id}`}><div className=" p-3 h-56 w-96 flex shadow-2xl shadow m-3">   
+                <Link to={`/category/teacher/${expt._id}`}><div className=" p-3 h-56 w-96 flex shadow-2xl  m-3">   
                 <div className="bg-black rounded-lg shadow-xl">
                     <img className="w-52 h-full rounded-lg opacity-60" src={expt.image}/>
                 </div>
@@ -86,7 +86,7 @@ rotate_right
 
 
 
-            <Link to="/category/teacher/id1"><div className=" p-3 h-56 w-96 flex shadow-2xl shadow m-3">   
+            <Link to="/category/teacher/id1"><div className=" p-3 h-56 w-96 flex shadow-2xl  m-3">   
                 <div className="bg-black rounded-lg shadow-xl">
                     <img className="w-52 h-full rounded-lg opacity-60" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"/>
                 </div>
@@ -99,7 +99,7 @@ rotate_right
                 </div>
               </div></Link>
 
-              <Link to="/category/teacher/id2"><div className=" p-3 h-56 w-96 flex shadow-2xl shadow m-3">
+              <Link to="/category/teacher/id2"><div className=" p-3 h-56 w-96 flex shadow-2xl  m-3">
                   <div className="bg-black rounded-lg shadow-xl">
                     <img className="w-52 h-full rounded-lg opacity-60" src="https://images.unsplash.com/photo-1504593811423-6dd665756598?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"/>
                   </div>
@@ -113,7 +113,7 @@ rotate_right
               </div></Link>
 
 
-              <div className=" p-3 h-56 w-96 flex shadow-2xl shadow m-3">
+              <div className=" p-3 h-56 w-96 flex shadow-2xl  m-3">
                   <div className="bg-black rounded-lg shadow-xl">
                     <img className="w-52 h-full rounded-lg opacity-60" src="https://images.unsplash.com/photo-1542206395-9feb3edaa68d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"/>
                   </div>
@@ -126,7 +126,7 @@ rotate_right
                 </div>
               </div>
 
-              <div className=" p-3 h-56 w-96 flex shadow-2xl shadow m-3">
+              <div className=" p-3 h-56 w-96 flex shadow-2xl  m-3">
                   <div className="bg-black rounded-lg shadow-xl">
                     <img className="w-52 h-full rounded-lg opacity-60" src="https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=736&q=80"/>
                   </div>
@@ -141,7 +141,7 @@ rotate_right
 
 
 
-              <div className=" p-3 h-56 w-96 flex shadow-2xl shadow m-3">
+              <div className=" p-3 h-56 w-96 flex shadow-2xl  m-3">
                   <div className="bg-black rounded-lg shadow-xl">
                     <img className="w-52 h-full rounded-lg opacity-60" src="https://images.unsplash.com/photo-1569124589354-615739ae007b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"/>
                   </div>
@@ -157,7 +157,7 @@ rotate_right
 
 
 
-              <div className=" p-3 h-56 w-96 flex shadow-2xl shadow m-3">
+              <div className=" p-3 h-56 w-96 flex shadow-2xl  m-3">
                   <div className="bg-black rounded-lg shadow-xl">
                     <img className="w-52 h-full rounded-lg opacity-60" src="https://images.unsplash.com/photo-1589571894960-20bbe2828d0a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80"/>
                   </div>
@@ -171,7 +171,7 @@ rotate_right
               </div>
 
 
-              <div className=" p-3 h-56 w-96 flex shadow-2xl shadow m-3">
+              <div className=" p-3 h-56 w-96 flex shadow-2xl  m-3">
                   <div className="bg-black rounded-lg shadow-xl">
                     <img className="w-52 h-full rounded-lg opacity-60" src="https://images.unsplash.com/photo-1589571894960-20bbe2828d0a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80"/>
                   </div>
@@ -185,7 +185,7 @@ rotate_right
               </div>
 
 
-              <div className=" p-3 h-56 w-96 flex shadow-2xl shadow m-3">
+              <div className=" p-3 h-56 w-96 flex shadow-2xl  m-3">
                   <div className="bg-black rounded-lg shadow-xl">
                     <img className="w-52 h-full rounded-lg opacity-60" src="https://images.unsplash.com/photo-1589571894960-20bbe2828d0a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80"/>
                   </div>
@@ -199,7 +199,7 @@ rotate_right
               </div>
 
 
-              <div className=" p-3 h-56 w-96 flex shadow-2xl shadow m-3">
+              <div className=" p-3 h-56 w-96 flex shadow-2xl  m-3">
                   <div className="bg-black rounded-lg shadow-xl">
                     <img className="w-52 h-full rounded-lg opacity-60" src="https://images.unsplash.com/photo-1589571894960-20bbe2828d0a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80"/>
                   </div>

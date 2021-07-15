@@ -8,14 +8,14 @@ function Watch__List() {
             <Navbar/>
             <nav></nav>
             <div className="bg-black">
-            <h1 className="absolute text-blue-400 text-6xl tracking-widest font-black z-20 transform top-1/5 mt-20 left-1/2 -translate-x-1/2 border-b-4 border-blue-300 pb-3"> Watch List </h1>
+            <h1 className="absolute text-blue-400 sm:text-6xl text-4xl tracking-widest font-black z-20 transform top-1/5  sm:mt-20 mt-28 left-1/2 -translate-x-1/2 border-b-4 border-blue-300 pb-3"> Watch List </h1>
                 <img className="object-fill opacity-40 w-full h-80" src="https://images.unsplash.com/photo-1557821552-17105176677c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80"/>
             </div>
             <div className="">
-            <div className="shadow-2xl flex flex-wrap justify-center">
+            <div className="shadow-2xl flex flex-wrap  justify-center">
 
             
-                <div className=" p-3 h-56 w-1/3 flex shadow-2xl bg-white rounded-md m-3">   
+                <div className=" p-3 h-56 w-full sm:w-1/3 flex shadow-2xl bg-white rounded-md m-3">   
                     <div className="bg-black rounded-lg shadow-xl">
                         <Link to="/category/teacher/id">
                             <img className="w-52 h-full rounded-lg opacity-60" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"/>
@@ -31,7 +31,7 @@ function Watch__List() {
                 </div>
 
 
-                <div className=" p-3 h-56 w-1/3 flex shadow-2xl bg-white rounded-md m-3">   
+                <div className=" p-3 h-56 w-full sm:w-1/3 flex shadow-2xl bg-white rounded-md m-3">   
                     <div className="bg-black rounded-lg shadow-xl">
                         <Link to="/category/teacher/id">
                             <img className="w-52 h-full rounded-lg opacity-60" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"/>
@@ -46,7 +46,7 @@ function Watch__List() {
                     </div>
                 </div>
 
-                <div className=" p-3 h-56 w-1/3 flex shadow-2xl bg-white rounded-md m-3">   
+                <div className=" p-3 h-56 w-full sm:w-1/3 flex shadow-2xl bg-white rounded-md m-3">   
                     <div className="bg-black rounded-lg shadow-xl">
                         <Link to="/category/teacher/id">
                             <img className="w-52 h-full rounded-lg opacity-60" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"/>
@@ -61,7 +61,7 @@ function Watch__List() {
                     </div>
                 </div>
 
-                <div className=" p-3 h-56 w-1/3 flex shadow-2xl bg-white rounded-md m-3">   
+                <div className=" p-3 h-56 w-full sm:w-1/3 flex shadow-2xl bg-white rounded-md m-3">   
                     <div className="bg-black rounded-lg shadow-xl">
                         <Link to="/category/teacher/id">
                             <img className="w-52 h-full rounded-lg opacity-60" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"/>
@@ -76,7 +76,7 @@ function Watch__List() {
                     </div>
                 </div>
 
-                <div className=" p-3 h-56 w-1/3 flex shadow-2xl bg-white rounded-md m-3">   
+                <div className=" p-3 h-56 w-full sm:w-1/3 flex shadow-2xl bg-white rounded-md m-3">   
                     <div className="bg-black rounded-lg shadow-xl">
                         <Link to="/category/teacher/id">
                             <img className="w-52 h-full rounded-lg opacity-60" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"/>
@@ -91,7 +91,7 @@ function Watch__List() {
                     </div>
                 </div>
 
-                <div className=" p-3 h-56 w-1/3 flex shadow-2xl bg-white rounded-md m-3">   
+                <div className=" p-3 h-56 w-full sm:w-1/3 flex shadow-2xl bg-white rounded-md m-3">   
                     <div className="bg-black rounded-lg shadow-xl">
                         <Link to="/category/teacher/id">
                             <img className="w-52 h-full rounded-lg opacity-60" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"/>
@@ -106,7 +106,7 @@ function Watch__List() {
                     </div>
                 </div>
 
-                <div className=" p-3 h-56 w-1/3 flex shadow-2xl bg-white rounded-md m-3">   
+                <div className=" p-3 h-56 w-full sm:w-1/3 flex shadow-2xl bg-white rounded-md m-3">   
                     <div className="bg-black rounded-lg shadow-xl">
                         <Link to="/category/teacher/id">
                             <img className="w-52 h-full rounded-lg opacity-60" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"/>
@@ -121,7 +121,7 @@ function Watch__List() {
                     </div>
                 </div>
 
-                <div className=" p-3 h-56 w-1/3 flex shadow-2xl bg-white rounded-md m-3">   
+                <div className=" p-3 h-56 w-full sm:w-1/3 flex shadow-2xl bg-white rounded-md m-3">   
                     <div className="bg-black rounded-lg shadow-xl">
                         <Link to="/category/teacher/id">
                             <img className="w-52 h-full rounded-lg opacity-60" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"/>
