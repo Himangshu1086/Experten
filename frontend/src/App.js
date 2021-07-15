@@ -21,10 +21,10 @@ function App() {
           <Route path="/admin">
             <Admin/>
           </Route>
-          <Route path="/category/teacher/id">
+          <Route path="/category/teacher/:id">
             <Profession__details/>
           </Route>
-          <Route path="/category/teacher">
+          <Route path="/category/:profession">
               <Navbar/>
              <Container__for_Card/>
           </Route>

@@ -43,14 +43,14 @@ function Slide__show() {
 
     return (
         <>
-        <span className="material-icons text-white z-50 absolute transform -translate-x-0  -translate-y-1/2 top-1/2 left-0 text-6xl pl-16">
+        <span className="material-icons text-white z-50 absolute transform -translate-x-0  -translate-y-1/2 top-1/2 left-0 text-xl sm:text-6xl pl-2 sm:pl-16">
                         arrow_back_ios
                 </span>
-                <span className="material-icons text-white z-50 absolute transform -translate-x-full  -translate-y-1/2 top-1/2 left-full text-6xl pr-16">
+                <span className="material-icons text-white z-50 absolute transform -translate-x-full  -translate-y-1/2 top-1/2 left-full text-xl sm:text-6xl pl-2 sm:pl-16">
                         arrow_forward_ios
         </span>
-            <div className="absolute transform -translate-x-1/2  -translate-y-1/2 top-1/2 left-1/2 z-50  flex w-auto">  
-                <h1 className="text-white text-6xl font-bold" style={{fontFamily:"Festive" , letterSpacing:"8px"}}>Welcome to My Website</h1>
+            <div className="absolute transform -translate-x-1/2  -translate-y-1/2 top-1/2 left-1/2 z-50  flex w-72 sm:w-auto">  
+                <h1 className="text-white  sm:text-6xl text-4xl text-center font-bold leading-10 sm:leading-loose " style={{fontFamily:"Festive" , letterSpacing:"8px" }}>Welcome to My Website</h1>
             </div>
             <div className=" h-screen bg-black">
                 <img id="img-1" style={{display:"none"}} className="  bg-cover h-screen w-screen z-30  opacity-30 absolute transform -translate-x-1/2  -translate-y-1/2 top-1/2 left-1/2 " src="https://images.unsplash.com/photo-1625190273603-0f5814961433?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" />

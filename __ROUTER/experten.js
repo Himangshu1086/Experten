@@ -79,10 +79,19 @@ router.post("/AddExpert" , async(req , res)=>{
 
 
 router.get("/GetExpert" , async(req , res)=>{
-    const expert = await Expert.find();
+
+    const professions = req.headers.profession;
+    const expert = await Expert.find({profession : professions});
     res.status(200).json({expert})
 })
 
+
+router.get("/GetExpertDetails" , async(req , res)=>{
+
+    const id = req.headers.id;
+    const expert = await Expert.findById({_id : id});
+    res.status(200).json({expert})
+})
 
 
 

@@ -1,13 +1,38 @@
-import React from 'react'
+import React ,{useEffect , useState} from 'react'
 import Navbar from '../../header/Header__for__home__page/Navbar'
 import $ from 'jquery'
+import { useParams } from 'react-router-dom';
 
 function Profession__details() {
+    const {id } = useParams();
+    const [ expertPortfolio , setExpertPortfolio] = useState({});
+    const [loading , setLoading] = useState(true);
+
+
+    useEffect(async() => {
+        
+        const res = await fetch("/GetExpertDetails" , {
+            method:"GET" ,
+            headers:{
+                "Content-Type":"application/json",
+                "id":id
+            }
+        });
+
+        const result = await  res.json();
+        setExpertPortfolio(result);
+        setLoading(false);
+
+    }, [])
 
 
     const popUp = () =>{
         $("#pop").css('display' ,'flex');
         }
+
+
+        if(loading) return <div className="absolute   top-1/2 left-1/2 transform -translate-x-1/2  text-6xl text-center">loading...</div>
+
 
     return (
         <div>
@@ -24,7 +49,7 @@ function Profession__details() {
             </div>
             <div className=" bg-black" style={{fontFamily:"Ubuntu"}}>
             <h1 className="absolute text-white text-5xl font-extralight tracking-widest z-10 transform top-1/4 mt-20 left-1/2 -translate-x-1/2 opacity-50 ">Hello, I'm</h1>
-                <h1 className="absolute text-white font-black text-6xl tracking-widest z-10 transform top-1/3 mt-24 left-1/2 -translate-x-1/2 border-b-2 pb-3">KATE GEORGECN</h1>
+                <h1 className="absolute text-white font-black text-6xl tracking-widest z-10 transform top-1/3 mt-24 left-1/2 -translate-x-1/2 border-b-2 pb-3">{expertPortfolio.expert.name}</h1>
                 <span className="absolute text-white text-center z-10 text-3xl tracking-wider transform top-1/2 mt-20 left-1/2 -translate-x-1/2 opacity-30">And This is My Portfolio</span>
                 <span onClick={popUp} className="absolute text-white text-center z-10 text-3xl tracking-wider transform top-96 mt-64 left-1/2 -translate-x-1/2  border-2 p-2 rounded-md px-3 hover:bg-blue-500 ">BOOK NOW</span>
                 <img className="w-full h-screen opacity-30 object-fit " src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" />

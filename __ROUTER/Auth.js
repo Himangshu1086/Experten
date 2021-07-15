@@ -28,7 +28,7 @@ router.post('/register', async (req , res )=>{
 
     try{
         
-        const userExist = await User.findOne({mobileNumber});
+        const userExist = await User.findOne({email});
 
         if(userExist){
             return res.status(422).json({err:"user exits already"})
@@ -39,11 +39,20 @@ router.post('/register', async (req , res )=>{
         }
         else{
             const user = new User({userName , mobileNumber , email ,password , confirmPass} );
-
             await user.save();
             
             const cart = new Cart({user:user._id})
             await cart.save();
+
+
+            const token = jwt.sign({_id :user._id} , process.env.JWT_SECRET_KEY , {
+                expiresIn:"30d"
+            });   
+            res.cookie("token" ,token ,{ secure: true });
+            res.status(200).json({token})
+            console.log(token)
+
+
 
             res.status(200).json({ message:"user registered successfully" })
         }
@@ -64,13 +73,13 @@ router.post("/signIn" , async (req , res ) => {
 
     try{
 
-        const { mobileNumber , password } = req.body;
+        const { email , password } = req.body;
 
-        if( !mobileNumber || !password){
+        if( !email || !password){
             return res.status(200).json({error:" plz fille the fields"})
         }
 
-        const userLogin = await User.findOne({mobileNumber});
+        const userLogin = await User.findOne({email});
         
         if(userLogin){
             const isMatch = await bcrypt.compare(password , userLogin.password);
