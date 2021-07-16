@@ -137,15 +137,16 @@ router.get("/getAllUsers" , async(req , res)=>{
 
 
 
-router.post("/userLoggedIn"  , async ( req  , res ) =>{
+router.get("/userLoggedIn"  , async ( req  , res ) =>{
     try{
-        //const userTokens = req.cookies.token;
-        const {userTokens } = req.body; 
-        //console.log(`the cookie req ${userTokens}`);
+        const userTokens = req.cookies.token;
+        //const userTokens = req.headers.Loggedtoken; 
+
+        console.log(`the cookie req ${userTokens}`);
         // const ab = jwt.decode(userTokens);
         // console.log(ab)
         const verifyToken = await jwt.verify(userTokens , process.env.JWT_SECRET_KEY);
-        //console.log(`user : ${verifyToken}`);
+        console.log(`user : ${verifyToken}`);
 
         const user = await User.findById({_id: verifyToken._id});
         res.status(200).json({user});

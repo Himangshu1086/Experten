@@ -35,8 +35,8 @@ rotate_right
         <div>
             <nav></nav>
            <div className="  h-96 bg-black">
-                <h1 className="absolute text-white text-6xl tracking-widest z-20 transform top-1/5 mt-24 sm:mt-20  left-1/2 -translate-x-1/2 border-b-2 pb-3">Teachers </h1>
-                <span className="absolute text-white text-center z-20 sm:text-3xl text-xl tracking-wider transform top-1/4  mt-20 sm:left-1/2 sm:-translate-x-1/2  ">Get your highly qualified from different universities personal mentors</span>
+                <h1 className="absolute text-white text-3xl sm:text-6xl tracking-widest z-20 transform top-1/5 mt-24 sm:mt-20  left-1/2 -translate-x-1/2 border-b-2 pb-3">{profession} </h1>
+                <span className="absolute text-white text-center z-20 sm:text-3xl mx-4 text-xl tracking-wider transform top-1/4  mt-20 sm:left-1/2 sm:-translate-x-1/2  ">Get your highly qualified professionals at your home</span>
                 <img className="w-full h-96 opacity-30 object-cover" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" />
             </div>
 

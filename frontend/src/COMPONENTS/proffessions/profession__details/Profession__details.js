@@ -2,6 +2,13 @@ import React ,{useEffect , useState} from 'react'
 import Navbar from '../../header/Header__for__others/Navbar'
 import $ from 'jquery'
 import { useParams } from 'react-router-dom';
+import facebook from '../../../PHOTO/social icon/facebook.png'
+import instagram from '../../../PHOTO/social icon/instagram.png'
+import linkedin from '../../../PHOTO/social icon/linkedin.png'
+import youtube from '../../../PHOTO/social icon/youtube.png'
+import PopUpServices from './PopUpServices';
+
+
 
 function Profession__details() {
     const {id } = useParams();
@@ -38,16 +45,7 @@ function Profession__details() {
         <div>
             <Navbar/>
             <nav></nav>
-            <div id="pop" className=" bg-blue-300 h-96 w-96 absolute items-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 hidden flex-col">
-            <h1 className="rounded-xl bg-green-300 w-40 text-center p-2 mt-2 " >Book Free Trail</h1>
-                <h1 className=" text-white font-bold text-center text-2xl" >Select Services : </h1>
-                <div className="h-40 bg-blue-500 w-full " >
-                    <h1 className="p-1 px-4">HOME</h1>
-                    <h2 className="p-1 px-4" >HOME</h2>
-                    <h3 className="p-1 px-4">HOME</h3>
-                </div>
-                
-            </div>
+            <div id="pop" className="hidden"><PopUpServices/></div>
             <div className=" bg-black" style={{fontFamily:"Ubuntu"}}>
             <h1 className="absolute text-white text-xl sm:text-5xl font-extralight tracking-widest z-10 transform top-10 sm:top-1/4 mt-20 left-1/2 -translate-x-1/2 opacity-50 ">Hello, I'm</h1>
                 <h1 className="absolute text-center text-white font-black text-2xl sm:text-6xl tracking-widest z-10 transform top-16 sm:top-1/3 mt-24 left-1/2 -translate-x-1/2 border-b-2 pb-3 ">{expertPortfolio.expert.name}
@@ -64,24 +62,24 @@ function Profession__details() {
                        <li className="sm:p-10 border-b-2 border-blue-400 mx-2 sm:mx-3">Contact</li>
                    </ul>
                </div>
-               <div className=" shadow-2xl h-96 w-full bg-blue-200 container my-10">
+               <div className=" shadow-2xl h-96 w-full bg-white container my-10">
                </div>
-               <h1 className="text-center text-2xl text-black">My Service </h1>
-               <div className="h-96 w-full bg-green-200 my-10"></div>
+               <h1 className="text-center sm:text-2xl text-xl text-black">My Service ⤵  </h1>
+               <div className="h-96 w-full bg-white shadow-2xl container my-10"></div>
                <div className=""></div>
-               <h1 className="text-center text-2xl text-black">Blog in Igni-Us </h1>
-               <div className="h-96 w-full bg-green-200 my-10"></div>
+               <h1 className="text-center sm:text-2xl text-xl text-black">Blog in Igni-Us ⤵  </h1>
+               <div className="h-96 w-full bg-white shadow-2xl container my-10"></div>
                <div className=""></div>
-               <h1 className="text-center text-2xl text-black">Reviews</h1>
-               <div className="h-96 w-full bg-green-200 my-10"></div>
+               <h1 className="text-center sm:text-2xl text-xl text-black">Reviews ⤵  </h1>
+               <div className="h-96 w-full bg-white shadow-2xl container my-10"></div>
                <div className=""></div>
-               <h1 className="text-center text-2xl text-black">Social Media Handles</h1>
+               <h1 className="text-center sm:text-2xl  text-black">Social Media Handles</h1>
                <div className="flex text-xs text-black font-bold opacity-60 justify-center">
                    <ul className="flex p-4">
-                       <li className="border-2 sm:p-10 p-2 border-b-2 border-blue-400 mx-2 sm:mx-3">facebook</li>
-                       <li className="border-2 sm:p-10 p-2 border-b-2 border-blue-400 mx-2 sm:mx-3">instagram</li>
-                       <li className="border-2 sm:p-10 p-2 border-b-2 border-blue-400 mx-2 sm:mx-3">whatsapp</li>
-                       <li className="border-2 sm:p-10 p-2 border-b-2 border-blue-400 mx-2 sm:mx-3">linkedin</li>
+                       <li className=" sm:p-10 p-2 w-10 border-blue-400 mx-2 sm:mx-3"><img src={facebook} /></li>
+                       <li className=" sm:p-10 p-2 w-10 border-blue-400 mx-2 sm:mx-3"><img src = {instagram} /></li>
+                       <li className=" sm:p-10 p-2 w-10 border-blue-400 mx-2 sm:mx-3"><img src={linkedin}/></li>
+                       <li className=" sm:p-10 p-2 w-10 border-blue-400 mx-2 sm:mx-3"><img src={youtube}/></li>
                    </ul>
                </div>
 

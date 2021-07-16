@@ -1,7 +1,44 @@
-import React , {useEffect} from 'react'
-import { Link } from 'react-router-dom'
+import React , {useState , useEffect} from 'react'
+import { Link ,useHistory} from 'react-router-dom'
 import $ from 'jquery'
+import logo from '../../../PHOTO/logo.png'
+import Cookies from 'universal-cookie';
+
+
 function Navbar() {
+
+  const [checkUser , setCheckUser] = useState(false);
+  const cookies = new Cookies();
+  const history = useHistory();
+
+  useEffect(async()=>{
+
+    try{
+      const res = await fetch("/userLoggedIn" , {
+      method:"GET" ,
+      headers:{
+        Accept:"application/json",
+        "Content-Type":"application/json",
+      } , 
+      credentials:"include"
+    });
+  
+    const data = await res.json();
+    console.log(data);
+    if(data)
+    {setCheckUser(true)}
+    
+  }catch(err){
+      console.log(err)
+    }
+
+
+  },[])
+
+
+
+
+
 
   window.addEventListener('scroll' , function(){
     let res = window.scrollY;
@@ -14,6 +51,7 @@ function Navbar() {
   })
 
 
+ //display the side window for the mobile view of navbar items  
 const displayNavItems = ()=>{
   let x = document.getElementById("humBurger");
   if (x.style.display === "flex") {
@@ -24,21 +62,47 @@ const displayNavItems = ()=>{
 }
 
 
+//logout function
+const logout = ()=>{
+  cookies.remove("token");
+  history.push("/");
+  window.location.reload();
+}
+
+
+
+//if(loading) return <>loading...</>
 
   return (
     <div>
       <nav id="navbar" className=" text-white fixed top-0 left-0 shadow-none z-50" style={{background:"transparent" , padding:"40px"}}>
         <div className="flex">
-          <div className="flex">
-            {/* <img className="sm:w-16 w-10 " src="logo.png"/> */}
-            <Link to="/" className=" hover:text-blue-300 text-xl sm:text-3xl px-3 pt-3 tracking-widest font-black text-center" style={{fontFamily:"Festive" ,letterSpacing:"4px" }}>Experten</Link>
-          </div>
+          <Link to="/"><div className="flex">
+            <img className="sm:w-16 w-14" src={logo}/>
+            <Link to="/" className=" hover:text-blue-300 text-3xl px-3 pt-3 tracking-widest font-black text-center" style={{fontFamily:"Festive" ,letterSpacing:"4px" }}>Experten</Link>
+          </div></Link>
           <ul className="absolute hidden sm:block right-0 sm:px-16 px-1" style={{fontFamily:"Ubuntu"}}>
-            <li>
+          {checkUser ? 
+              <><li>
+                <Link to="/account" className= "hover:text-blue-300">
+                      Account
+                  </Link>
+              </li>
+              <li>
+                  <Link to="/" onClick={logout}  className="hover:text-blue-300">
+                       Sign out
+                  </Link>
+              </li>
+              </>
+           :<>
+           <li>
               <Link to="/signIn" className="hover:text-blue-300">
                    Sign In
               </Link>
-            </li>
+              </li>
+           </>
+          }
+
             <li>
               <Link to="/about" className="hover:text-blue-300" >
                  About
@@ -51,16 +115,28 @@ const displayNavItems = ()=>{
                </Link>
             </li>
             </ul>
-            <span onClick={displayNavItems} class="absolute sm:hidden pt-3 right-5 material-icons">drag_indicator</span>
+            <span onClick={displayNavItems} class="absolute sm:hidden pt-3 right-5 material-icons cursor-pointer ">drag_indicator</span>
         </div>
 
+
+
         <div id="humBurger" className="hidden">
-        <ul  className="absolute sm:hidden h-screen font-bold tracking-wider text-center rounded-lg bg-blue-300  flex flex-col right-0 sm:px-16 mt-3 px-1" style={{fontFamily:"Ubuntu"}}>
-            <li>
-              <Link to="/signIn" className= " text-black ">
-                   Sign In
-              </Link>
-            </li>
+        <ul  className="absolute sm:hidden h-screen font-bold tracking-wider text-center rounded-lg bg-blue-300  flex flex-col right-0 sm:px-16  top-24 px-1" style={{fontFamily:"Ubuntu"}}>
+           {checkUser ? 
+              <><li>
+                <Link to="/account" className= "text-black ">
+                      Account
+                  </Link></li>
+                 <li><Link to="/" onClick={logout} className= "text-black ">
+                      Sign out
+                  </Link>
+              </li></>
+           :<>
+                  <li><Link to="/signIn" className= "text-black ">
+                      Sign In
+                  </Link></li>
+           </>
+            }
             <li>
               <Link to="/about" className="text-black " >
                  About
