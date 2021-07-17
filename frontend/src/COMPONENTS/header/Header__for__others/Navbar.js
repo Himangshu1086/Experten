@@ -1,7 +1,7 @@
 import React , {useEffect , useState} from 'react'
 import { Link , useHistory} from 'react-router-dom'
 import $ from 'jquery'
-import logo from '../../../PHOTO/logo.png'
+import logo from '../../../PHOTO/experten-logo.png'
 import Cookies from 'universal-cookie';
 function Navbar() {
 
@@ -58,7 +58,7 @@ const logout = ()=>{
       <nav className=" text-white fixed top-0 left-0 bg-black shadow-none z-50" style={{ padding:"2px"}}>
         <div className="flex">
           <Link to="/"><div className="flex">
-            <img className="sm:w-16 w-14 " src={logo} />
+            <img className="sm:w-16 w-14 m-3" src={logo} />
             <Link to="/" className=" hover:text-blue-300 text-3xl px-3 pt-3 tracking-widest font-black text-center" style={{fontFamily:"Festive" ,letterSpacing:"4px" }}>Experten</Link>
           </div></Link>
           <ul className="absolute hidden sm:block right-0 sm:px-16 px-1" style={{fontFamily:"Ubuntu"}}>

@@ -34,7 +34,12 @@ function Profession__details() {
 
 
     const popUp = () =>{
-        $("#pop").css('display' ,'flex');
+        const x = document.getElementById("pop")
+        if (x.style.display === "flex") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "flex";
+          }
         }
 
 
@@ -45,7 +50,7 @@ function Profession__details() {
         <div>
             <Navbar/>
             <nav></nav>
-            <div id="pop" className="hidden"><PopUpServices/></div>
+            <div id="pop" className="hidden" ><PopUpServices/></div>
             <div className=" bg-black" style={{fontFamily:"Ubuntu"}}>
             <h1 className="absolute text-white text-xl sm:text-5xl font-extralight tracking-widest z-10 transform top-10 sm:top-1/4 mt-20 left-1/2 -translate-x-1/2 opacity-50 ">Hello, I'm</h1>
                 <h1 className="absolute text-center text-white font-black text-2xl sm:text-6xl tracking-widest z-10 transform top-16 sm:top-1/3 mt-24 left-1/2 -translate-x-1/2 border-b-2 pb-3 ">{expertPortfolio.expert.name}

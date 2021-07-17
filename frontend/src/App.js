@@ -40,6 +40,9 @@ function App() {
           <Route path="/signup">
             <Sign__Up/>
           </Route>
+          <Route path="/signup">
+            <Sign__Up/>
+          </Route>
           <Route path="/" component={Home}/>
       </Switch>
         <Footer/>

@@ -45,14 +45,14 @@ console.log(location);
 
     return (
         <>
-        <span className="material-icons text-white z-30 absolute transform -translate-x-0  -translate-y-1/2 top-1/2 left-0 text-xl sm:text-6xl pl-2 sm:pl-16">
+        <span className="material-icons text-white z-30 absolute transform -translate-x-0  -translate-y-1/2 top-1/2 left-0 text-xl sm:text-6xl pl-2 sm:pl-16 opacity-40">
                         arrow_back_ios
                 </span>
-                <span className="material-icons text-white z-30 absolute transform -translate-x-full  -translate-y-1/2 top-1/2 left-full text-xl sm:text-6xl pl-2 sm:pl-16">
+                <span className="material-icons text-white z-30 absolute transform -translate-x-full  -translate-y-1/2 top-1/2 left-full text-xl sm:text-6xl pl-2 sm:pl-16 opacity-40">
                         arrow_forward_ios
         </span>
-            <div className="absolute transform -translate-x-1/2  -translate-y-1/2 top-1/2 left-1/2 z-30  flex flex-col w-72 sm:w-auto">  
-                <h1 className="text-white  sm:text-6xl text-4xl text-center font-bold leading-10 sm:leading-loose " style={{fontFamily:"Festive" , letterSpacing:"8px" }}>Get Professionals of your choice</h1>
+            <div className="absolute transform -translate-x-1/2  -translate-y-1/2 top-1/2 left-1/2 z-30 sm:mt-0 mt-20 flex flex-col w-72 sm:w-auto">  
+                <h1 className="text-white  sm:text-6xl  text-4xl text-center font-bold leading-10 sm:leading-loose " style={{fontFamily:"Festive" , letterSpacing:"8px" }}>Get Professionals of your choice</h1>
             </div>
             <form className="flex mt-8 absolute transform -translate-x-1/2  -translate-y-1/2 top-40 left-1/2 z-30 w-80 sm:w-1/3 ">
                     <input type="text" className=" text-center bg-black text-white" placeholder="search for a profesional" ></input>
@@ -60,7 +60,7 @@ console.log(location);
             </form>
             <div className="mt-20  absolute transform -translate-x-1/2  -translate-y-1/2   top-2/3 left-1/2  z-30 w-80 sm:w-1/3  ">
             <form>
-                    <select onChange={(e)=>{setLocation(e.target.value)}} className="browser-default w-80 appearance-none tracking-wider pl-5">
+                    <select onChange={(e)=>{setLocation(e.target.value)}} className="browser-default w-80 sm:w-full appearance-none tracking-wider pl-16">
                     <option value="" selected disabled >search by your location</option>
                     <option value="Guwahati" >Guwahati</option>
                     <option value="Jorhat">Jorhat</option>
