@@ -43,8 +43,7 @@ router.post('/register', async (req , res )=>{
             
             const cart = new Cart({user:user._id})
             await cart.save();
-
-
+           
             const token = jwt.sign({_id :user._id} , process.env.JWT_SECRET_KEY , {
                 expiresIn:"30d"
             });   

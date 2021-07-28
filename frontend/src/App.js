@@ -11,6 +11,7 @@ import Sign__Up from './COMPONENTS/signUp/Sign__Up';
 import About from './COMPONENTS/about/About';
 import Watch__List from './COMPONENTS/watch__list/Watch__List';
 import Admin from './COMPONENTS/ADMIN/Admin';
+import Professional_details_2 from './COMPONENTS/proffessions/profession__details/PROFESSIONS_DETAIL_2/Professional_details_2';
 
 function App() {
 
@@ -21,9 +22,9 @@ function App() {
           <Route path="/admin">
             <Admin/>
           </Route>
-          <Route path="/category/teacher/:id">
+          <Route path="/category/:others_profession/:id">
             <Profession__details/>
-          </Route>
+          </Route> 
           <Route path="/category/:profession">
               <Navbar/>
              <Container__for_Card/>

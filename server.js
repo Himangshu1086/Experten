@@ -17,8 +17,8 @@ require("./__DATABASE/__INITDB/initDB");
 // link the router files 
 app.use(require('./__ROUTER/experten'))
 app.use(require('./__ROUTER/Auth'))
-app.use(require('./__ROUTER/experten'))
 app.use(require('./__ROUTER/Services'))
+app.use(require('./__ROUTER/Address'))
 
 
 

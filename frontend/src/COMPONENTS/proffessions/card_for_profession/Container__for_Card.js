@@ -7,7 +7,8 @@ function Container__for_Card() {
 const [Experts, setExperts] = useState({});
 const [loading, setloading] = useState(true);
 const {profession} = useParams();
-
+const {others_profession} = useParams();
+console.log(others_profession)
 
 useEffect(async()=>{
 
@@ -47,7 +48,7 @@ rotate_right
               { Experts.expert.map(expt=>{
                 return (
                   <div>
-                <Link to={`/category/teacher/${expt._id}`}><div className=" p-3 h-56 w-96 flex shadow-2xl  m-3">   
+                <Link to={`/category/${profession}/${expt._id}`}><div className=" p-3 h-56 w-96 flex shadow-2xl  m-3">   
                 <div className="bg-black rounded-lg shadow-xl">
                     <img className="w-52 h-full rounded-lg opacity-60" src={expt.image}/>
                 </div>

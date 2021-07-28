@@ -2,11 +2,12 @@ import React ,{useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import './Category.css'
 
+
 function Container__For__Category() {
 
     
     return (
-        <div >
+        <div className="sm:mx-10">
             <h1 className=" container my-4 sm:mt-10 sm:mb-10 text-lg sm:text-4xl font-black"  style={{fontFamily:"Ubuntu"}}>Explore Different Professionals ⤵  </h1>
         <div  className=" container  grid grid-cols-6 gap-x-1 gap-y-1 sm:gap-x-5 sm:gap-y-5 ">
 

@@ -11,7 +11,10 @@ import PopUpServices from './PopUpServices';
 
 
 function Profession__details() {
-    const {id } = useParams();
+    const {id , others_profession} = useParams();
+    
+    // use this other_profession params to display the teacher detail along
+    console.log(others_profession);
     const [ expertPortfolio , setExpertPortfolio] = useState({});
     const [loading , setLoading] = useState(true);
 
