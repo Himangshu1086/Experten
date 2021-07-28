@@ -80,7 +80,7 @@ console.log(getaddress)
                      getaddress.map(ads =>{
                         return (
                             <>
-                                <h1 className="text-white">{ads.name}</h1>
+                                <h1 className="text-center text-4xl text-white">{ads.name}</h1>
                             </>
                         )
                     })
