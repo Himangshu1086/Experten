@@ -12,7 +12,19 @@ import About from './COMPONENTS/about/About';
 import Watch__List from './COMPONENTS/watch__list/Watch__List';
 import Admin from './COMPONENTS/ADMIN/Admin';
 import Professional_details_2 from './COMPONENTS/proffessions/profession__details/PROFESSIONS_DETAIL_2/Professional_details_2';
-
+import Account from './COMPONENTS/User__Account/Account';
+import AddExpert from './COMPONENTS/ADMIN/Components/AddExpert';
+import AddService from './COMPONENTS/EXPERT PANEL/COMPONENTS/AddService';
+import AdminPanelForExpert from './COMPONENTS/EXPERT PANEL/AdminPanelForExpert';
+import Addcontact from './COMPONENTS/EXPERT PANEL/COMPONENTS/Addcontact';
+import AddEducation from './COMPONENTS/EXPERT PANEL/COMPONENTS/AddEducation';
+import Addexperience from './COMPONENTS/EXPERT PANEL/COMPONENTS/Addexperience';
+import Addphotogallery from './COMPONENTS/EXPERT PANEL/COMPONENTS/Addphotogallery';
+import AddpinAvailable from './COMPONENTS/EXPERT PANEL/COMPONENTS/AddpinAvailable';
+import AddAvailablePlace from './COMPONENTS/EXPERT PANEL/COMPONENTS/AddAvailablePlace';
+import PlacedOrders from './COMPONENTS/User__Account/COMPONENTS/PlacedOrders';
+import AccountDetails from './COMPONENTS/User__Account/COMPONENTS/AccountDetails';
+import AddAddress from './COMPONENTS/User__Account/COMPONENTS/AddAddress'
 function App() {
 
   return (
@@ -43,6 +55,45 @@ function App() {
           </Route>
           <Route path="/signup">
             <Sign__Up/>
+          </Route>
+          <Route path="/account">
+            <Account/>
+          </Route>
+          <Route path="/expertsetting">
+            <AdminPanelForExpert/>
+          </Route>
+          <Route path="/addexpert">
+            <AddExpert/>
+          </Route>
+          <Route path="/addservice">
+            <AddService/>
+          </Route>
+          <Route path="/addcontact">
+            <Addcontact/>
+          </Route>
+          <Route path="/addeducation">
+            <AddEducation/>
+          </Route>
+          <Route path="/addexperience">
+            <Addexperience/>
+          </Route>
+          <Route path="/addphoto">
+            <Addphotogallery/>
+          </Route>
+          <Route path="/addpin">
+            <AddpinAvailable/>
+          </Route>
+          <Route path="/addplace">
+            <AddAvailablePlace/>
+          </Route>
+          <Route path="/addaddress">
+            <AddAddress/>
+          </Route>
+          <Route path="/accountdetail">
+            <AccountDetails/>
+          </Route>
+          <Route path="/placeorder">
+            <PlacedOrders/>
           </Route>
           <Route path="/" component={Home}/>
       </Switch>

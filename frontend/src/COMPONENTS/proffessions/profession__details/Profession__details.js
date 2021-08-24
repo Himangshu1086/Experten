@@ -61,7 +61,9 @@ function Profession__details() {
                 <span onClick={popUp} className="absolute text-white text-center z-10 sm:text-3xl tracking-wider transform sm:top-96 top-80  sm:mt-64 left-1/2 -translate-x-1/2  border-2 sm:p-2 rounded-md px-3 hover:bg-blue-500 ">BOOK NOW</span>
                 <img className="w-full h-96 sm:h-screen opacity-30 object-fit " src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" />
             </div>
-           <div className=" bg-white">
+           <div className=" bg-white mt-4">
+               <h1 className="text-center sm:text-2xl text-xl text-black ">My Service ⤵   </h1>
+               <div className="h-96 w-full bg-white shadow-2xl container my-10"></div>
                <div className="flex text-xs sm:text-xl text-black font-bold opacity-60 justify-center">
                    <ul className="flex p-4">
                        <li className="sm:p-10 pb-2 border-b-2 border-blue-400 mx-2 sm:mx-3">Education</li>
@@ -70,13 +72,9 @@ function Profession__details() {
                        <li className="sm:p-10 border-b-2 border-blue-400 mx-2 sm:mx-3">Contact</li>
                    </ul>
                </div>
-               <div className=" shadow-2xl h-96 w-full bg-white container my-10">
-               </div>
-               <h1 className="text-center sm:text-2xl text-xl text-black">My Service ⤵  </h1>
-               <div className="h-96 w-full bg-white shadow-2xl container my-10"></div>
-               <div className=""></div>
-               <h1 className="text-center sm:text-2xl text-xl text-black">Blog in Igni-Us ⤵  </h1>
-               <div className="h-96 w-full bg-white shadow-2xl container my-10"></div>
+               
+               <div className=" shadow-2xl h-96 w-full bg-white container my-10"></div>
+
                <div className=""></div>
                <h1 className="text-center sm:text-2xl text-xl text-black">Reviews ⤵  </h1>
                <div className="h-96 w-full bg-white shadow-2xl container my-10"></div>

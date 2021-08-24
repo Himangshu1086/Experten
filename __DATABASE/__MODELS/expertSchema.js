@@ -1,31 +1,67 @@
 const mongoose = require('mongoose')
-
+const { ObjectId} = mongoose.Schema.Types;
 const expertSchema = new mongoose.Schema({
 
     profession : {type:String , required:true},
     availability : {type:Boolean ,  default:true },
     name : {type : String , required:true},
-    school : {type : String , required:true},
-    twelveCollege :{type : String , required:true},
-    UGEducation : {type : String , required:true},
-    otherEducation1 : {type : String },
-    otherEducation2 : {type : String },
-    otherEducation3 : {type : String },
+    Education : [
+        {
+            College : {type:String },
+            course : {type :String },
+            subject :{type:String  },
+            percentage : {type :Number}  
+        }
+    ],
+    experiences : [
+        {
+            Title :{type:String},
+            detail : {type :String}
+        }
+    ],
     experienceYear : {type : String },
-    experiencePlace1 : {type : String },
-    experiencePlace2 : {type : String },
-    experiencePlace3 : {type : String },
-    experiencePlace4 : {type : String },
-    achievement1 : {type : String },
-    achievement2 : {type : String },
-    achievement3 : {type : String },
-    achievement4 : {type : String },
     aboutMe: {type : String , required:true},
-    mobileNumber : {type : Number , required:true},
-    address : {type : String , required:true},
-    pin : {type : Number , required:true},
-    image : {type : String , required:true}
-
+    contact : [
+        {
+            phNumber : {type:String , required:true},
+            AltPhNumber :{type:String },
+            address :{type:String , required:true},
+            pin :{type:Number , required:true},
+            district:{type:String , required:true},
+            state :{type:String , required:true},
+            email : {type:String}
+        }
+    ],
+    ProfilePic : {type : String , required:true},
+    imageGallery :[
+        {
+            Photo :{type:String},
+            PhotoDescript : {type:String} 
+        }
+    ],
+    pinWhereAvaiable : [
+        {
+            pinAvailable :{type:String , required:true},
+        }
+    ],
+    placeWhereAvailable : [
+        {
+            place :{type :String,required:true}
+        }
+    ],
+    services : [
+        {
+            serviceId:{
+                type:ObjectId ,
+                ref :"service"
+            }
+        }
+    ],
+    review :[
+        {
+            reviewId:{type:ObjectId , ref:"review"}
+        }
+    ]
 
 
 
