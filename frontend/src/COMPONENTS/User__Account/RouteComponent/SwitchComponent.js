@@ -17,6 +17,9 @@ function SwitchComponent() {
                             <Link  to="/addaddress"> <h1>Add Address</h1></Link>
                         </div>
                         <div className="p-10 border-2 my-4">
+                            <Link  to="/viewAddress"> <h1>View Address</h1></Link>
+                        </div>
+                        <div className="p-10 border-2 my-4">
                             <Link to="/placeorder"><h1>Orders</h1></Link>
                         </div>
                         <div className="p-10 border-2 my-4">

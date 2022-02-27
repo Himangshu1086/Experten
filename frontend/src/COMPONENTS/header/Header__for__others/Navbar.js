@@ -64,7 +64,7 @@ const logout = ()=>{
           <ul className="absolute hidden sm:block right-0 sm:px-16 px-1" style={{fontFamily:"Ubuntu"}}>
           {checkUser ? 
               <><li>
-                <Link to="/account" className= "hover:text-blue-300">
+                <Link to="/accountdetail" className= "hover:text-blue-300">
                       Account
                   </Link>
               </li>
@@ -104,7 +104,7 @@ const logout = ()=>{
         <ul  className="absolute sm:hidden h-screen font-bold tracking-wider text-center rounded-lg bg-blue-300  flex flex-col right-0 sm:px-16 mt-3 px-1" style={{fontFamily:"Ubuntu"}}>
            {checkUser ? 
               <><li>
-                <Link to="/account" className= "text-black ">
+                <Link to="/accountdetail" className= "text-black ">
                       Account
                   </Link></li>
                  <li><Link to="/" onClick={logout} className= "text-black ">

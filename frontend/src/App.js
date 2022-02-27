@@ -24,7 +24,8 @@ import AddpinAvailable from './COMPONENTS/EXPERT PANEL/COMPONENTS/AddpinAvailabl
 import AddAvailablePlace from './COMPONENTS/EXPERT PANEL/COMPONENTS/AddAvailablePlace';
 import PlacedOrders from './COMPONENTS/User__Account/COMPONENTS/PlacedOrders';
 import AccountDetails from './COMPONENTS/User__Account/COMPONENTS/AccountDetails';
-import AddAddress from './COMPONENTS/User__Account/COMPONENTS/AddAddress'
+import AddAddress from './COMPONENTS/User__Account/COMPONENTS/ADDRESS/AddAddress'
+import ViewAddress from './COMPONENTS/User__Account/COMPONENTS/ADDRESS/ViewAddress'
 function App() {
 
   return (
@@ -57,7 +58,7 @@ function App() {
             <Sign__Up/>
           </Route>
           <Route path="/account">
-            <Account/>
+          <AccountDetails/>
           </Route>
           <Route path="/expertsetting">
             <AdminPanelForExpert/>
@@ -94,6 +95,9 @@ function App() {
           </Route>
           <Route path="/placeorder">
             <PlacedOrders/>
+          </Route>
+          <Route path="/viewAddress">
+            <ViewAddress/>
           </Route>
           <Route path="/" component={Home}/>
       </Switch>

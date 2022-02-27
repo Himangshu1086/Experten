@@ -1,6 +1,6 @@
 import React , {useState , useEffect} from 'react'
-import SwitchComponent from '../RouteComponent/SwitchComponent';
-import Navbar from '../../header/Header__for__others/Navbar'
+import SwitchComponent from '../../RouteComponent/SwitchComponent';
+import Navbar from '../../../header/Header__for__others/Navbar'
 
 function AddAddress() {
 
@@ -68,18 +68,18 @@ else
 }
 
 
-if (loading) return <><div className="absolute m-auto text-4xl top-1/2 left-1/2">Loading...</div></>
+if (loading) return <><div className="absolute m-auto text-4xl top-1/2 left-1/2 ">Loading...</div></>
 
 
 console.log(getaddress)
     return (
-        <div>
+        <div className="min-h-screen">
             <Navbar/>
             <nav></nav>
             <div className="flex">
-              <SwitchComponent/>
-                <div className=" p-10">
-
+              <SwitchComponent className="flex"/>
+                <div className="p-10 w-2/5">
+                
                 <form >
                   <h1 className="text-left text-2xl">Add Address </h1>
                 <input  value={Uname}  onChange={(e)=>setUname(e.target.value)} type="text" placeholder="Name"  />
@@ -91,16 +91,7 @@ console.log(getaddress)
                 <input value={Landmark} onChange={(e)=>setLandmark(e.target.value)} type="text" placeholder="Landmark"/>
                     <input type="submit" className="w-full mt-3 p-2 bg-blue-300 text-black" onClick={addressAdd} />
                 </form>
-                <h1 className="text-left text-3xl mt-5"> Address : </h1>
-                {
-                     getaddress.map(ads =>{
-                        return (
-                            <>
-                                <h1 className="text-center text-xl text-black">{ads.name}</h1>
-                            </>
-                        )
-                    })
-                }
+               
             </div>
             </div>
         </div>

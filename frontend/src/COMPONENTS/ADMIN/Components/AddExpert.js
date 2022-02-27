@@ -1,15 +1,52 @@
-import React from 'react'
+import React , {useState , useEffect} from 'react'
 import Navbar from '../../header/Header__for__others/Navbar'
 import SwitchComponent from '../Routecomponent/SwitchComponent'
 
 function AddExpert() {
 
+    const [profession , setProfession] = useState("");
+    const [name , setName] = useState("");
+    const [experienceYear , setExperienceYear] =useState("");
+    const [aboutMe , setAboutMe] =useState("");
+    const [ProfilePic , setProfilePic] =useState("");
 
 
 
+    // http request 
+
+    const addExperttoDB = async(e)=>{
+
+        e.preventDefault();
+        console.log(profession , name , experienceYear ,aboutMe ,ProfilePic);
+        const expt = await fetch("/addExperts" ,{
+            method:"POST" ,
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({profession , name , experienceYear ,aboutMe ,ProfilePic})
+          });
+        
+          const data = await expt.json();
+          
+          if(data.status === 501 || !data)
+          {
+            window.alert("Invalid Credentials");
+            console.log("Invalid Credentials");
+        }
+            if(data.error){
+              window.alert("Invalid Credentials")
+            }
+          else
+          {
+              console.log("login successful");
+              //history.push("/");
+             window.location.reload();
+              
+          }
+    }
 
 
-
+ 
 
     return (
         <div>
@@ -21,75 +58,29 @@ function AddExpert() {
                 Add Profession To the Application.
             </h1>
              {/* expert basic details */}
-            <form className="mx-20">
-                <input type="text" placeholder="Profession"></input>
-                <input type="text" placeholder="Name"></input>
-                <input type="text" placeholder="Year of Experience"></input>
-                <input type="text" placeholder="About You"></input>
-                <input type="text" placeholder="Profile Pic"></input>
-                <button className="bg-blue-300 w-full p-3 mt-4">Submit</button>
-            </form>
-            {/* expert Education form */}
-            <h1 className="p-10 text-4xl text-left mx-10">Add Education</h1>
-            <form className="mx-20">
-                <input type="text" placeholder="College"></input>
-                <input type="text" placeholder="Course"></input>
-                <input type="text" placeholder="Subject"></input>
-                <input type="text" placeholder="percentage"></input>
-                <button className="bg-blue-300 w-full p-3 mt-4">Add</button>
-            </form>
-
-            {/* expert Experiences */}
-            <h1 className="p-10 text-4xl text-left mx-10">Add Experiences</h1>
-            <form className="mx-20 mb-20 ">
-                <input type="text" placeholder="Title ( also add duration )"></input>
-                <textarea type="text" placeholder="Description"></textarea>
-                <button className="bg-blue-300 w-full p-3 mt-4">Submit</button>
-            </form>
-
-            {/* Expert contact */}
-
-            <h1 className="p-10 text-4xl text-left mx-10">Add Contact</h1>
-            <form className="mx-20">
-                <textarea type="text" placeholder="Address"></textarea>
-                <input type="text" placeholder="Pincode"></input>
-                <input type="text" placeholder="District"></input>
-                <input type="text" placeholder="state"></input>
-                <input type="text" placeholder="Mobile Number"></input>
-                <input type="text" placeholder="Email"></input>
-                <button className="bg-blue-300 w-full p-3 mt-4">Add</button>
-            </form>
-
-            <h1 className="p-10 text-4xl text-left mx-10">Add image to gallery</h1>
-            <form className="mx-20">
-                <input type="text" placeholder="Photo Url"></input>
-                <input type="text" placeholder="Photo Description"></input>
-                <button className="bg-blue-300 w-full p-3 mt-4">Add</button>
-            </form>
-
-            <h1 className="p-10 text-4xl text-left mx-10">Add Available PIN </h1>
-            <form className="mx-20">
-                <input type="text" placeholder="Pincode "></input>
-                <button className="bg-blue-300 w-full p-3 mt-4">Add</button>
-            </form>
-
-            <h1 className="p-10 text-4xl text-left mx-10">Add Available Places </h1>
-            <form className="mx-20 ">
-                <input type="text" placeholder="Place"></input>
-                <button className="bg-blue-300 w-full p-3 mt-4">Add</button>
-            </form>
-
-            <h1 className=" px-10 m-10 text-3xl mt-10">
-                Add Services For the Experten : 
-            </h1>
-             {/* expert basic details */}
-            <form className="mx-20 mb-20">
-                <input type="text" placeholder="Profession"></input>
-                <input type="text" placeholder="Name"></input>
-                <input type="text" placeholder="Year of Experience"></input>
-                <input type="text" placeholder="About You"></input>
-                <input type="text" placeholder="Profile Pic"></input>
-                <button className="bg-blue-300 w-full p-3 mt-4">Submit</button>
+            <form method="POST" className="mx-20">
+                <input type="text" value={profession} 
+                onChange={(e)=>{setProfession(e.target.value)}}
+                placeholder="Profession"></input>
+                <input type="text" placeholder="Name"
+                value={name} 
+                onChange={(e)=>{setName(e.target.value)}}
+                ></input>
+                <input type="text" placeholder="Year of Experience"
+                value={experienceYear} 
+                onChange={(e)=>{setExperienceYear(e.target.value)}}
+                ></input>
+                <input type="text" placeholder="About You"
+                value={aboutMe} 
+                onChange={(e)=>{setAboutMe(e.target.value)}}
+                ></input>
+                <input type="text" placeholder="Profile Pic"
+                value={ProfilePic} 
+                onChange={(e)=>{setProfilePic(e.target.value)}}
+                ></input>
+                <button className="bg-blue-300 w-full p-3 mt-4" 
+                onClick = {addExperttoDB}
+                >Submit</button>
             </form>
             </div> 
 
