@@ -1,6 +1,6 @@
 
 import './App.css';
-import Footer from './COMPONENTS/footer/Footer';
+import Footer from './COMPONENTS/FOOTER/Footer';
 import { BrowserRouter as  Router,Switch,Route } from 'react-router-dom';
 import Container__for_Card from './COMPONENTS/proffessions/card_for_profession/Container__for_Card';
 import Home from './COMPONENTS/home__page/Home';
