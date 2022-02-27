@@ -13,10 +13,6 @@ import Watch__List from './COMPONENTS/watch__list/Watch__List';
 import Admin from './ADMIN/Admin';
 import PlacedOrders from './COMPONENTS/User__Account/COMPONENTS/PlacedOrders';
 import AccountDetails from './COMPONENTS/User__Account/COMPONENTS/AccountDetails';
-<<<<<<< HEAD
-import AddAddress from './COMPONENTS/User__Account/COMPONENTS/ADDRESS/AddAddress'
-=======
->>>>>>> 90b42c30698e16f84214d397117b7a50acba4e7f
 import ViewAddress from './COMPONENTS/User__Account/COMPONENTS/ADDRESS/ViewAddress'
 function App() {
 
@@ -50,43 +46,8 @@ function App() {
           </Route>
           <Route path="/account">
           <AccountDetails/>
-<<<<<<< HEAD
           </Route>
-          <Route path="/expertsetting">
-            <AdminPanelForExpert/>
-          </Route>
-          <Route path="/addexpert">
-            <AddExpert/>
-          </Route>
-          <Route path="/addservice">
-            <AddService/>
-          </Route>
-          <Route path="/addcontact">
-            <Addcontact/>
-          </Route>
-          <Route path="/addeducation">
-            <AddEducation/>
-          </Route>
-          <Route path="/addexperience">
-            <Addexperience/>
-          </Route>
-          <Route path="/addphoto">
-            <Addphotogallery/>
-          </Route>
-          <Route path="/addpin">
-            <AddpinAvailable/>
-          </Route>
-          <Route path="/addplace">
-            <AddAvailablePlace/>
-          </Route>
-          <Route path="/addaddress">
-            <AddAddress/>
-=======
->>>>>>> 90b42c30698e16f84214d397117b7a50acba4e7f
-          </Route>
-          
-
-    
+        
 
           <Route path="/accountdetail">
             <AccountDetails/>
