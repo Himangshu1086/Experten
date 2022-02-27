@@ -23,12 +23,12 @@ const expertSchema = new mongoose.Schema({
     aboutMe: {type : String , required:true},
     contact : [
         {
-            phNumber : {type:String , required:true},
+            phNumber : {type:String },
             AltPhNumber :{type:String },
-            address :{type:String , required:true},
-            pin :{type:Number , required:true},
-            district:{type:String , required:true},
-            state :{type:String , required:true},
+            address :{type:String },
+            pin :{type:Number },
+            district:{type:String },
+            state :{type:String },
             email : {type:String}
         }
     ],
@@ -41,28 +41,14 @@ const expertSchema = new mongoose.Schema({
     ],
     pinWhereAvaiable : [
         {
-            pinAvailable :{type:String , required:true},
+            pinAvailable :{type:String },
         }
     ],
     placeWhereAvailable : [
         {
-            place :{type :String,required:true}
+            place :{type :String}
         }
     ],
-    services : [
-        {
-            serviceId:{
-                type:ObjectId ,
-                ref :"service"
-            }
-        }
-    ],
-    review :[
-        {
-            reviewId:{type:ObjectId , ref:"review"}
-        }
-    ]
-
 
 
 }
@@ -70,6 +56,6 @@ const expertSchema = new mongoose.Schema({
 {timestamps:true}
 )
 
-const Expert = mongoose.model('expert' , expertSchema);
+const Expert = mongoose.models.expert || mongoose.model('expert' , expertSchema);
 
 module.exports = Expert;

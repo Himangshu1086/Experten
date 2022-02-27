@@ -4,9 +4,9 @@ const DB = process.env.MONGO_URI;
 
 mongoose.connect( DB, {
     useNewUrlParser:true,
-    useCreateIndex:true,
+    // useCreateIndex:true,
     useUnifiedTopology:true,
-    useFindAndModify:false
+    // useFindAndModify:true
 }).then(()=>{
     console.log('connected to mongo');
 }).catch((err)=>{

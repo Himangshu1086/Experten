@@ -73,13 +73,14 @@ router.post("/signIn" , async (req , res ) => {
     try{
 
         const { email , password } = req.body;
+        console.log(email , password);
 
         if( !email || !password){
             return res.status(200).json({error:" plz fille the fields"})
         }
 
         const userLogin = await User.findOne({email});
-        
+        console.log(userLogin)
         if(userLogin){
             const isMatch = await bcrypt.compare(password , userLogin.password);
 
