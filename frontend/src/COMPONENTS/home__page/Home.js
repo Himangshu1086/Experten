@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../FOOTER/Footer'
 import Navbar from '../header/Header__for__home__page/Navbar'
 import Container__For__Category from './People__container/Container__For__Category'
 import Poster from './poster/Poster'
@@ -15,6 +16,7 @@ function Home() {
             <Poster/>
             <Container__For__Category/>
         </div>
+            <Footer/>
         </>
     )
 }

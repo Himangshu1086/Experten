@@ -1,6 +1,6 @@
 
 import './App.css';
-import Footer from './COMPONENTS/footer/Footer';
+import Footer from './COMPONENTS/FOOTER/Footer';
 import { BrowserRouter as  Router,Switch,Route } from 'react-router-dom';
 import Container__for_Card from './COMPONENTS/proffessions/card_for_profession/Container__for_Card';
 import Home from './COMPONENTS/home__page/Home';
@@ -8,29 +8,20 @@ import Navbar from './COMPONENTS/header/Header__for__others/Navbar';
 import Profession__details from './COMPONENTS/proffessions/profession__details/Profession__details';
 import Sign__In from './COMPONENTS/signIn/Sign__In';
 import Sign__Up from './COMPONENTS/signUp/Sign__Up';
-import About from './COMPONENTS/about/About';
+import About from './COMPONENTS/ABOUT/About';
 import Watch__List from './COMPONENTS/watch__list/Watch__List';
-import Admin from './COMPONENTS/ADMIN/Admin';
-import Professional_details_2 from './COMPONENTS/proffessions/profession__details/PROFESSIONS_DETAIL_2/Professional_details_2';
-import Account from './COMPONENTS/User__Account/Account';
-import AddExpert from './COMPONENTS/ADMIN/Components/AddExpert';
-import AddService from './COMPONENTS/EXPERT PANEL/COMPONENTS/AddService';
-import AdminPanelForExpert from './COMPONENTS/EXPERT PANEL/AdminPanelForExpert';
-import Addcontact from './COMPONENTS/EXPERT PANEL/COMPONENTS/Addcontact';
-import AddEducation from './COMPONENTS/EXPERT PANEL/COMPONENTS/AddEducation';
-import Addexperience from './COMPONENTS/EXPERT PANEL/COMPONENTS/Addexperience';
-import Addphotogallery from './COMPONENTS/EXPERT PANEL/COMPONENTS/Addphotogallery';
-import AddpinAvailable from './COMPONENTS/EXPERT PANEL/COMPONENTS/AddpinAvailable';
-import AddAvailablePlace from './COMPONENTS/EXPERT PANEL/COMPONENTS/AddAvailablePlace';
+import Admin from './ADMIN/Admin';
 import PlacedOrders from './COMPONENTS/User__Account/COMPONENTS/PlacedOrders';
 import AccountDetails from './COMPONENTS/User__Account/COMPONENTS/AccountDetails';
+<<<<<<< HEAD
 import AddAddress from './COMPONENTS/User__Account/COMPONENTS/ADDRESS/AddAddress'
+=======
+>>>>>>> 90b42c30698e16f84214d397117b7a50acba4e7f
 import ViewAddress from './COMPONENTS/User__Account/COMPONENTS/ADDRESS/ViewAddress'
 function App() {
 
   return (
-    
-      <Router>
+        <Router>
       <Switch>
           <Route path="/admin">
             <Admin/>
@@ -59,6 +50,7 @@ function App() {
           </Route>
           <Route path="/account">
           <AccountDetails/>
+<<<<<<< HEAD
           </Route>
           <Route path="/expertsetting">
             <AdminPanelForExpert/>
@@ -89,7 +81,13 @@ function App() {
           </Route>
           <Route path="/addaddress">
             <AddAddress/>
+=======
+>>>>>>> 90b42c30698e16f84214d397117b7a50acba4e7f
           </Route>
+          
+
+    
+
           <Route path="/accountdetail">
             <AccountDetails/>
           </Route>
@@ -101,9 +99,7 @@ function App() {
           </Route>
           <Route path="/" component={Home}/>
       </Switch>
-        <Footer/>
       </Router>
-    
   );
 }
 
