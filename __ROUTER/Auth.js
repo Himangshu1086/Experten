@@ -38,7 +38,7 @@ router.post('/register', async (req , res )=>{
             return res.status(422).json({error:"password not matched"})
         }
         else{
-            const user = new User({userName , mobileNumber , email ,password , confirmPass} );
+            const user = new User({type :"user" , userName , mobileNumber , email ,password , confirmPass} );
             await user.save();
             
             const cart = new Cart({user:user._id})
@@ -136,6 +136,7 @@ router.get("/getAllUsers" , async(req , res)=>{
 
 
 
+// get particular user logged in 
 
 router.get("/userLoggedIn"  , async ( req  , res ) =>{
     try{
@@ -148,7 +149,7 @@ router.get("/userLoggedIn"  , async ( req  , res ) =>{
         const verifyToken = await jwt.verify(userTokens , process.env.JWT_SECRET_KEY);
         console.log(`user : ${verifyToken}`);
 
-        const user = await User.findById({_id: verifyToken._id});
+        const user = await User.find({_id: verifyToken._id , type :"user"});
         res.status(200).json({user});
         // console.log(user)
 
@@ -158,6 +159,46 @@ router.get("/userLoggedIn"  , async ( req  , res ) =>{
     }
     
 })
+
+
+
+router.get("/superAdminLogin"  , async ( req  , res ) =>{
+    try{
+        const userTokens = req.cookies.token;
+        const verifyToken = await jwt.verify(userTokens , process.env.JWT_SECRET_KEY);
+        const user = await User.find({_id: verifyToken._id , type:"super"});
+        res.status(200).json({user});
+    }catch(err){
+        res.status(401).send("Unauthorised")
+        console.log(err);
+    }
+    
+})
+
+
+router.get("/expertAdminLogin"  , async ( req  , res ) =>{
+    try{
+        const userTokens = req.cookies.token;
+        const verifyToken = await jwt.verify(userTokens , process.env.JWT_SECRET_KEY);
+        const user = await User.find({_id: verifyToken._id , type :"expert"});
+        res.status(200).json({user});
+    }catch(err){
+        res.status(401).send("Unauthorised")
+        console.log(err);
+    }
+    
+})
+
+
+
+
+
+
+
+
+
+
+
 
 
 

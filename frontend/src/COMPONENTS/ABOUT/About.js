@@ -8,7 +8,7 @@ function About() {
         <div>
             <Navbar/>
             <div className=" bg-black sm:flex h-screen text-white">
-            <Link to="/admin" className="w-full sm:flex hidden h-96 sm:h-full object-fill  opacity-30 sm:opacity-60"><img  src={person} /></Link>
+            <Link to="/admin" className="w-full sm:flex hidden h-96 sm:h-full object-fill  opacity-30 sm:opacity-60"><img  src="https://images.unsplash.com/photo-1515847049296-a281d6401047?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" /></Link>
             
                         <h1 className="text-center hidden mt-5 sm:text-blue-300 tracking-widest sm:text-6xl">HIMANGSHU BAISHYA</h1>
                         <h1 className="text-center hidden mt-10 sm:text-white tracking-widest font-extralight sm:text-2xl">National Institute of Technology , Karnataka , Surathkal</h1>

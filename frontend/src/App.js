@@ -1,6 +1,5 @@
 
 import './App.css';
-import Footer from './COMPONENTS/FOOTER/Footer';
 import { BrowserRouter as  Router,Switch,Route } from 'react-router-dom';
 import Container__for_Card from './COMPONENTS/proffessions/card_for_profession/Container__for_Card';
 import Home from './COMPONENTS/home__page/Home';
@@ -14,6 +13,7 @@ import Admin from './ADMIN/Admin';
 import PlacedOrders from './COMPONENTS/User__Account/COMPONENTS/PlacedOrders';
 import AccountDetails from './COMPONENTS/User__Account/COMPONENTS/AccountDetails';
 import ViewAddress from './COMPONENTS/User__Account/COMPONENTS/ADDRESS/ViewAddress'
+import PageNotFound from './PagenotFound'
 function App() {
 
   return (
@@ -58,7 +58,10 @@ function App() {
           <Route path="/viewAddress">
             <ViewAddress/>
           </Route>
-          <Route path="/" component={Home}/>
+          <Route path="/" component={Home} exact={true}/>
+          <Route path="*" exact={true} >
+              <PageNotFound/>
+            </Route>
       </Switch>
       </Router>
   );

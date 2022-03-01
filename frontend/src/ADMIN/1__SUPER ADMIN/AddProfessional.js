@@ -45,11 +45,10 @@ function AddProfessional() {
  
 
     return (
-        <div>
-        <nav></nav>
-        <div className="min-h-screen flex">
-           <div><h1 className=" px-10 m-10 text-4xl mt-10">
-                Add Profession To the Application.
+        <div className='p-5'>
+        <div className="h-100 flex m-auto w-3/5 p-5 rounded-xl shadow-2xl">
+           <div><h1 className=" border-b-2 pb-4 border-blue-400 px-10 m-10 text-4xl mt-10 text-black text-center">
+                Add Profession To the Application
             </h1>
              {/* expert basic details */}
             <form method="POST" className="mx-20">
@@ -72,7 +71,7 @@ function AddProfessional() {
                 value={ProfilePic} 
                 onChange={(e)=>{setProfilePic(e.target.value)}}
                 ></input>
-                <button className="bg-blue-300 w-full p-3 mt-4" 
+                <button className="bg-green-300 rounded-md w-full p-3 mt-4 hover:bg-black hover:text-white" 
                 onClick = {addExperttoDB}
                 >Submit</button>
             </form>

@@ -7,11 +7,14 @@ function Navbar() {
 
 
   const [checkUser , setCheckUser] = useState(false);
+  const [checkSuper , setCheckSuper] = useState(false);
+  const [checkExpert , setCheckExpert] = useState(false);
   const cookies = new Cookies();
   const history = useHistory();
 
+  //General users
   useEffect(async()=>{
-
+    
     try{
       const res = await fetch("/userLoggedIn" , {
       method:"GET" ,
@@ -23,8 +26,7 @@ function Navbar() {
     });
   
     const data = await res.json();
-    console.log(data);
-    if(data)
+    if(data.user[0].type ==="user")
     {setCheckUser(true)}
     
   }catch(err){
@@ -32,8 +34,44 @@ function Navbar() {
     }
 
 
-  },[])
+    try{
+      const res = await fetch("/expertAdminLogin" , {
+      method:"GET" ,
+      headers:{
+        Accept:"application/json",
+        "Content-Type":"application/json",
+      } , 
+      credentials:"include"
+    });
+  
+    const data = await res.json();
+    if(data.user[0].type === "expert")
+    {setCheckExpert(true)}
+    
+  }catch(err){
+      console.log(err)
+    }
 
+
+    try{
+      const res = await fetch("/superAdminLogin" , {
+      method:"GET" ,
+      headers:{
+        Accept:"application/json",
+        "Content-Type":"application/json",
+      } , 
+      credentials:"include"
+    });
+    const data = await res.json();
+    if(data.user[0].type == "super")
+    {setCheckSuper(true)}
+    
+  }catch(err){
+      console.log(err)
+    }
+
+
+  },[])
 
 
   const displayNavItems = ()=>{
@@ -62,38 +100,38 @@ const logout = ()=>{
             <Link to="/" className=" hover:text-blue-300 text-3xl px-3 pt-3 tracking-widest font-black text-center" style={{fontFamily:"Festive" ,letterSpacing:"4px" }}>Experten</Link>
           </div></Link>
           <ul className="absolute hidden sm:block right-0 sm:px-16 px-1" style={{fontFamily:"Ubuntu"}}>
-          {checkUser ? 
-              <><li>
-                <Link to="/accountdetail" className= "hover:text-blue-300">
-                      Account
-                  </Link>
-              </li>
-              <li>
-                  <Link to="/" onClick={logout}  className="hover:text-blue-300">
-                       Sign out
-                  </Link>
-              </li>
-              </>
-           :<>
-           <li>
-              <Link to="/signIn" className="hover:text-blue-300">
-                   Sign In
-              </Link>
-              </li>
-           </>
+          {checkSuper ? 
+            <>
+              <li><Link  to="/admin/superAdmin" className= "hover:text-blue-300">superAdmin</Link></li>
+              <li><Link to="/" onClick={logout}  className="hover:text-blue-300">Sign out</Link></li>
+            </>
+            :
+            <></>
+            }
+
+
+          {
+            checkExpert ? 
+            <>
+              <li><Link  to="/admin/expertAdmin" className= "hover:text-blue-300">expert Admin</Link></li>
+              <li><Link to="/" onClick={logout}  className="hover:text-blue-300">Sign out</Link></li>
+            </>
+            :
+            <></>
           }
 
-            <li>
-              <Link to="/about" className="hover:text-blue-300" >
-                 About
-              </Link>
-            </li>
-            <li>
-              <Link to="/watchList" className="hover:text-blue-300" >
-                <div className="material-icons align-middle">favorite_border</div>
-                  Watch List
-               </Link>
-            </li>
+
+          {checkUser ? 
+            <>
+            <li><Link to="/accountdetail" className= "hover:text-blue-300">Account</Link></li>
+            <li><Link to="/" onClick={logout}  className="hover:text-blue-300">Sign out</Link></li>
+            </>
+           :
+            <li><Link to="/signIn" className="hover:text-blue-300">Sign In</Link></li>
+
+          }
+            <li><Link to="/about" className="hover:text-blue-300" >About</Link></li>
+            <li><Link to="/watchList" className="hover:text-blue-300" ><div className="material-icons align-middle">favorite_border</div>Watch List</Link></li>
             </ul>
             <span onClick={displayNavItems} class="absolute sm:hidden pt-3 right-5 material-icons cursor-pointer ">drag_indicator</span>
         </div>
@@ -102,32 +140,38 @@ const logout = ()=>{
 
         <div id="humBurger" className="hidden">
         <ul  className="absolute sm:hidden h-screen font-bold tracking-wider text-center rounded-lg bg-blue-300  flex flex-col right-0 sm:px-16 mt-3 px-1" style={{fontFamily:"Ubuntu"}}>
-           {checkUser ? 
-              <><li>
-                <Link to="/accountdetail" className= "text-black ">
-                      Account
-                  </Link></li>
-                 <li><Link to="/" onClick={logout} className= "text-black ">
-                      Sign out
-                  </Link>
-              </li></>
-           :<>
-                  <li><Link to="/signIn" className= "text-black ">
-                      Sign In
-                  </Link></li>
-           </>
+        {checkSuper ? 
+            <>
+              <li><Link  to="/admin/superAdmin" className= "hover:text-blue-300">superAdmin</Link></li>
+              <li><Link to="/" onClick={logout}  className="hover:text-blue-300">Sign out</Link></li>
+            </>
+            :
+            <></>
             }
-            <li>
-              <Link to="/about" className="text-black " >
-                 About
-              </Link>
-            </li>
-            <li>
-              <Link to="/watchList" className="text-black hover:text-blue-300" >
-                <div className="material-icons align-middle">favorite_border</div>
-                  Watch List
-               </Link>
-            </li>
+
+
+          {
+            checkExpert ? 
+            <>
+              <li><Link  to="/admin/expertAdmin" className= "hover:text-blue-300">expert Admin</Link></li>
+              <li><Link to="/" onClick={logout}  className="hover:text-blue-300">Sign out</Link></li>
+            </>
+            :
+            <></>
+          }
+
+
+          {checkUser ? 
+            <>
+            <li><Link to="/accountdetail" className= "hover:text-blue-300">Account</Link></li>
+            <li><Link to="/" onClick={logout}  className="hover:text-blue-300">Sign out</Link></li>
+            </>
+           :
+            <li><Link to="/signIn" className="hover:text-blue-300">Sign In</Link></li>
+
+          }
+            <li><Link to="/about" className="hover:text-blue-300" >About</Link></li>
+            <li><Link to="/watchList" className="hover:text-blue-300" ><div className="material-icons align-middle">favorite_border</div>Watch List</Link></li>
             </ul>
             </div>
 
