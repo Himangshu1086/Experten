@@ -8,7 +8,7 @@ function Container__For__Category() {
     
     return (
         <div className="sm:mx-10">
-            <h1 className=" container my-4 sm:mt-10 sm:mb-10 text-lg sm:text-4xl font-black"  style={{fontFamily:"Ubuntu"}}>Explore Different Professionals ⤵  </h1>
+            <h1 className="text-blue-300 container my-4 sm:mt-10 sm:mb-10 text-lg sm:text-4xl font-black"  style={{fontFamily:"Ubuntu"}}>Explore Different Professionals ⤵  </h1>
         <div  className=" container  grid grid-cols-6 gap-x-1 gap-y-1 sm:gap-x-5 sm:gap-y-5 ">
 
             <div className=" col-start-1 col-end-4 h-96 bg-black text-black rounded-lg ">               
@@ -31,7 +31,7 @@ function Container__For__Category() {
 
             </div>
             <div class="col-start-1 col-end-7 h-96 bg-black text-black rounded-lg  ">
-            <Link to="/category/VideoAndGraphics"><div  className="relative z-30 h-96 object-fit w-full   sm:text-3xl text-white font-black"><h1 id="heading-category" className=" w-auto pb-2 ml-3 sm:mx-10 pt-80 ">Video Editor & Graphics Degisner</h1></div></Link>
+            <Link to="/category/VideoAndGraphics"><div  className="relative z-30 h-96 object-fit w-full   sm:text-3xl text-white font-black"><h1 id="heading-category" className=" w-auto pb-2 ml-3 sm:mx-10 pt-80 ">Video Editor & Graphics Designer</h1></div></Link>
                   <img className="relative transition w-full  object-fill  h-96 -top-96 rounded-lg opacity-50  z-10" src="https://images.unsplash.com/photo-1562343192-4a2ce87c13e4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"/>
             </div>
             <div class="col-start-1 col-end-5 h-96 bg-black text-black rounded-lg  ">

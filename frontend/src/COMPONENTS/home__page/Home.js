@@ -9,8 +9,7 @@ import Slide__show from './slide__show/Slide__show'
 function Home() {
     return (
         <>
-        <div className="mb-4">
-
+        <div className="pb-4" style={{backgroundImage: "linear-gradient(black, lightblue)"}}>
             <Navbar/>
             <Slide__show/>
             <Poster/>
