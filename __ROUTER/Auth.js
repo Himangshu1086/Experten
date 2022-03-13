@@ -148,9 +148,8 @@ router.get("/userLoggedIn"  , async ( req  , res ) =>{
         // console.log(ab)
         const verifyToken = await jwt.verify(userTokens , process.env.JWT_SECRET_KEY);
         console.log(`user : ${verifyToken}`);
-
         const user = await User.find({_id: verifyToken._id , type :"user"});
-        res.status(200).json({user});
+        res.status(200).json({user})
         // console.log(user)
 
     }catch(err){
