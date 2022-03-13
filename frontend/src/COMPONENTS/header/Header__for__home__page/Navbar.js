@@ -139,7 +139,7 @@ const logout = ()=>{
 
           {checkUser ? 
             <>
-            <li><Link to="/accountdetail" className= "hover:text-blue-300">Account</Link></li>
+            <li><Link to="/account" className= "hover:text-blue-300">Account</Link></li>
             <li><Link to="/" onClick={logout}  className="hover:text-blue-300">Sign out</Link></li>
             </>
            :
@@ -179,7 +179,7 @@ const logout = ()=>{
 
           {checkUser ? 
             <>
-            <li><Link to="/accountdetail" className= "hover:text-blue-300">Account</Link></li>
+            <li><Link to="/account" className= "hover:text-blue-300">Account</Link></li>
             <li><Link to="/" onClick={logout}  className="hover:text-blue-300">Sign out</Link></li>
             </>
            :

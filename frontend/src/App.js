@@ -12,16 +12,17 @@ import Watch__List from './COMPONENTS/watch__list/Watch__List';
 import Admin from './ADMIN/Admin';
 import PlacedOrders from './COMPONENTS/User__Account/COMPONENTS/PlacedOrders';
 import AccountDetails from './COMPONENTS/User__Account/COMPONENTS/AccountDetails';
-import ViewAddress from './COMPONENTS/User__Account/COMPONENTS/ADDRESS/ViewAddress'
+import ViewAddress from './ADMIN/3__USER ACCOUNT/Address/ViewAddress'
 import PageNotFound from './PagenotFound'
+import ProtectedRoutes from './COMPONENTS/OTHERS/ProtectedRoutes';
+import SuperAdmin from './ADMIN/1__SUPER ADMIN/SuperAdmin';
+import expertRoute from './ADMIN/2__EXPERT ADMIN/ExpertAdmin';
+import UserAccount from './ADMIN/3__USER ACCOUNT/UserAccount';
 function App() {
 
   return (
         <Router>
       <Switch>
-          <Route path="/admin">
-            <Admin/>
-          </Route>
           <Route path="/category/:others_profession/:id">
             <Profession__details/>
           </Route> 
@@ -35,29 +36,21 @@ function App() {
           <Route path="/about">
             <About/>
           </Route>
-          <Route path="/watchList">
-            <Watch__List/>
-          </Route>
+         
           <Route path="/signup">
             <Sign__Up/>
           </Route>
-          <Route path="/signup">
-            <Sign__Up/>
-          </Route>
-          <Route path="/account">
-          <AccountDetails/>
-          </Route>
-        
+         
 
-          <Route path="/accountdetail">
-            <AccountDetails/>
-          </Route>
-          <Route path="/placeorder">
-            <PlacedOrders/>
-          </Route>
           <Route path="/viewAddress">
             <ViewAddress/>
           </Route>
+
+          <ProtectedRoutes path="/watchList" component={Watch__List} auth={true} />
+          <ProtectedRoutes path="/account" component={UserAccount} auth={true} />
+          <ProtectedRoutes path="/admin/expertAdmin" component={Admin} auth={true} />
+          <ProtectedRoutes path="/admin/superAdmin" component={Admin}  auth={true}  />
+          
           <Route path="/" component={Home} exact={true}/>
           <Route path="*" exact={true} >
               <PageNotFound/>

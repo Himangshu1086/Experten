@@ -1,6 +1,4 @@
 import React , {useState , useEffect} from 'react'
-import SwitchComponent from '../../RouteComponent/SwitchComponent';
-import Navbar from '../../../header/Header__for__others/Navbar'
 
 function AddAddress() {
 
@@ -73,15 +71,11 @@ if (loading) return <><div className="absolute m-auto text-4xl top-1/2 left-1/2 
 
 console.log(getaddress)
     return (
-        <div className="min-h-screen">
-            <Navbar/>
-            <nav></nav>
-            <div className="flex">
-              <SwitchComponent className="flex"/>
-                <div className="p-10 w-2/5">
-                
+        <div className="flex justify-center">
+
+                <div className="p-8 m-auto w-3/5 rounded-xl shadow-2xl" style={{background:"black"}}>
                 <form >
-                  <h1 className="text-left text-2xl">Add Address </h1>
+                  <h1 className="text-center text-2xl text-white">Add Address </h1>
                 <input  value={Uname}  onChange={(e)=>setUname(e.target.value)} type="text" placeholder="Name"  />
                 <input value={Mobile}  onChange={(e)=>setMobile(e.target.value)} type="number" placeholder="Mobile number"/>
                 <input value={Town}  onChange={(e)=>setTown(e.target.value)} type="text" placeholder="Town/City"/>
@@ -89,10 +83,9 @@ console.log(getaddress)
                 <textarea value={Address} style={{height:"100px" , textDecoration:"none"}}  onChange={(e)=>setAddress(e.target.value)} type="text" placeholder="Address"></textarea>
                 <input value={pin} onChange={(e)=>setPin(e.target.value)}  name="PIN" id="pin" placeholder="Pin"/>
                 <input value={Landmark} onChange={(e)=>setLandmark(e.target.value)} type="text" placeholder="Landmark"/>
-                    <input type="submit" className="w-full mt-3 p-2 bg-blue-300 text-black" onClick={addressAdd} />
+                    <input type="submit" className="rounded-md w-full mt-3 p-2 bg-blue-300 text-black" onClick={addressAdd} />
                 </form>
-               
-            </div>
+          
             </div>
         </div>
     )
