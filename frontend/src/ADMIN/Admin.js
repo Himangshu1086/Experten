@@ -5,8 +5,6 @@ import ExpertAdmin from './2__EXPERT ADMIN/ExpertAdmin'
 import SuperAdmin from './1__SUPER ADMIN/SuperAdmin'
 function Admin() {
 
-    
-
     return (
         <div>        
             <Navbar/>

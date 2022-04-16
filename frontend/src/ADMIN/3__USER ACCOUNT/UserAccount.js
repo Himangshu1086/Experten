@@ -5,7 +5,11 @@ import AddAddress from './Address/AddAddress'
 import ViewAddress from './Address/ViewAddress'
 import OrderList from './OrderList'
 import PastOrders from './PastOrders'
+import {AuthUser} from '../../../src/COMPONENTS/OTHERS/AuthCheck'
+
 function UserAccount() {
+  const userLog = AuthUser();
+  if(!userLog) return <>loading...</>
   return (
     <div>
       <Navbar/>

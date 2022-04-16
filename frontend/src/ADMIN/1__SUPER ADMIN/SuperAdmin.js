@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
 import AddProfessional from './AddProfessional'
-
+import {AuthSuper} from '../../../src/COMPONENTS/OTHERS/AuthCheck'
 export default function SuperAdmin() {
 
-    
+    const superLog = AuthSuper();
+    if(!superLog) return <>loading...</>
 
   return (
     <div>

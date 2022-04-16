@@ -11,16 +11,10 @@ import About from './COMPONENTS/ABOUT/About';
 import Watch__List from './COMPONENTS/watch__list/Watch__List';
 import Admin from './ADMIN/Admin';
 import PageNotFound from './PagenotFound'
-import ProtectedRoutes from './COMPONENTS/OTHERS/ProtectedRoutes';
 import UserAccount from './ADMIN/3__USER ACCOUNT/UserAccount';
 
 function App() {
 
-  const [user , setUser] = useState(true);
-  const [expert , setExpert] = useState(true);
-  const [admin , setAAdmin] = useState(true);
-  const [loading , setLoading] = useState(true);
- 
 
   return (
         <Router>
@@ -44,10 +38,10 @@ function App() {
           </Route>
     
 
-          <ProtectedRoutes path="/watchList" component={Watch__List} auth={user} />
-          <ProtectedRoutes path="/account" component={UserAccount} auth={user} />
-          <ProtectedRoutes path="/admin/expertAdmin" component={Admin} auth={expert} />
-          <ProtectedRoutes path="/admin/superAdmin" component={Admin}  auth={admin}  />
+          <Route path="/watchList" component={Watch__List} />
+          <Route path="/account" component={UserAccount} />
+          <Route path="/admin/expertAdmin" component={Admin} />
+          <Route path="/admin/superAdmin" component={Admin}   />
           <Route path="/" component={Home} exact={true}/>
           <Route path="*" exact={true} >
               <PageNotFound/>

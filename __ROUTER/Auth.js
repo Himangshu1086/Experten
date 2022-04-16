@@ -143,14 +143,15 @@ router.get("/userLoggedIn"  , async ( req  , res ) =>{
         const userTokens = req.cookies.token;
         //const userTokens = req.headers.Loggedtoken; 
 
-        console.log(`the cookie req ${userTokens}`);
         // const ab = jwt.decode(userTokens);
         // console.log(ab)
+        // const user_id = ab._id
+        // const user = await User.find({_id: user_id })
+        // console.log(user[0].type)
         const verifyToken = await jwt.verify(userTokens , process.env.JWT_SECRET_KEY);
         console.log(`user : ${verifyToken}`);
-        const user = await User.find({_id: verifyToken._id , type :"user"});
+        const user = await User.find({_id: verifyToken._id })
         res.status(200).json({user})
-        // console.log(user)
 
     }catch(err){
         res.status(401).send("Unauthorised")

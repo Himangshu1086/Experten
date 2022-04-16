@@ -1,7 +1,10 @@
 import React , {useState , useEffect} from 'react'
+import {AuthSuper} from '../../../src/COMPONENTS/OTHERS/AuthCheck'
+
 
 function AddProfessional() {
 
+    const superLog = AuthSuper();
     const [profession , setProfession] = useState("");
     const [name , setName] = useState("");
     const [experienceYear , setExperienceYear] =useState("");
@@ -42,7 +45,8 @@ function AddProfessional() {
     }
 
 
- 
+
+    if(!superLog) return <>Loading...</>
 
     return (
         <div className='p-5'>
